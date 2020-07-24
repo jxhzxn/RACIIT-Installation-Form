@@ -3,6 +3,26 @@
     padding: 0 0 0 0;
 }
 
+body{
+    /* background-image: url("./assets/images/bg2.png"); */
+    background-color: #ffffff;
+}
+
+html, body { 
+    margin: 0;  
+    padding: 0;
+    
+}
+
+.background { 
+    position:absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #3193b1;
+}
+
 .form-elements{
     display: flex;
     justify-content: center;
@@ -11,18 +31,28 @@
 }
 
 .input-field{
-    margin: 20px 20px 20px 20px;
+    margin: 15px 15px 15px 15px;
     height: 50px;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
-    border-bottom: 1px solid black;
+    border-bottom: 1.5px solid #3193b1;
     outline: none;
-    width: 350px;
+    width: 300px;
     font-family: 'Heebo', sans-serif;
+    /* color: #1681a1; */
     font-weight: 500;
     font-size: 18px;
+    background-color: rgba(255, 255, 255, 0);
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #3193b19a;
+    /* color: rgba(0, 0, 0, 0.356); */
+    opacity: 1; /* Firefox */
+    font-size: 18px;
+    text-align: center;
+  }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -30,19 +60,23 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input {
+    text-align: center;
+}
+
 .input-field:hover{
-    border-bottom: 2px solid #7b5bb5;
+    border-bottom: 3px solid #3193b1;
 }
 
 .input-field:focus{
-    border-bottom: 2px solid #7b5bb5;
+    border-bottom: 3px solid #3193b1;
 }
 
 .register-btn{
     font-family: 'Heebo', sans-serif;
     font-weight: 500;
     font-size: 18px;
-    background-color: #7b5bb5;
+    background-color: #3193b1;
     color: white;
     border: none;
     outline: none;
@@ -50,6 +84,7 @@ input::-webkit-inner-spin-button {
     height: 50px;
     cursor: pointer;
     margin-top: 20px;
+    box-shadow: 0 4px 4px rgb(121, 121, 121);
 }
 
 .body-container{
@@ -57,7 +92,20 @@ input::-webkit-inner-spin-button {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 70px;
+    z-index: 1;
+}
+
+.body-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 600px;
+    background-color: rgb(230, 230, 230);
+    background-color: #d9e2e6;
+    box-shadow: 0 6px 8px 2px rgb(121, 121, 121);
+    z-index: 2;
 }
 
 .invitation-container{
@@ -67,7 +115,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 150px;
+    padding-right: 50px;
 }
 
 .form-container{
@@ -76,7 +124,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: center;
     width: 50%;
-    padding-left: 150px;
+    padding-left: 50px;
 }
 
 .video-box{
